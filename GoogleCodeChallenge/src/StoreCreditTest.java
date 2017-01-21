@@ -15,12 +15,13 @@ public class StoreCreditTest {
     public void setUp() throws Exception {
 
     }
-
+    PriorityQueue<String> Credit_info = new PriorityQueue<String>();
+    int[] value1,value2;
     @Test
     public void testAueueFileandConvertString() throws Exception {
         PriorityQueue<String> Credit_info = new PriorityQueue<String>();
         try {
-            BufferedReader reader = new BufferedReader (new FileReader ("C:\\Users\\orion2166\\Documents\\GitHub\\GoogleCodeChallenge\\src\\A-small-practice.in"));
+            BufferedReader reader = new BufferedReader (new FileReader ("C:\\Users\\orion2166\\Documents\\GitHub\\Google-Coding-Questions\\GoogleCodeChallenge\\src\\A-small-practice.in"));
             String line;
             while ((line = reader.readLine ()) != null) {
                 Credit_info.add (line);
@@ -33,9 +34,14 @@ public class StoreCreditTest {
             return;
         }
         assertEquals(Credit_info.size (), 31);
-    }
-    @Test
-    public 
 
+        value1 = new int[Integer.parseInt(Credit_info.peek())];
+        value2 = new int[Integer.parseInt(Credit_info.poll())];
+        assertEquals(value1.length, 10);
+        assertEquals(11, 10);
+        assertEquals(value2.length, 10);
+    }
+  //  @Test
+   // public void testParseList(String value)
 
 }
